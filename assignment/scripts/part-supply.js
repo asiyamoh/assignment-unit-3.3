@@ -43,7 +43,7 @@ for(i=0; i < supplyChanges.length; i++){
         console.log('Removed', supplyChanges[i], 'parts');
     }
     else {
-        console.log('No Change');
+        console.log(supplyChanges[i],'No Change');
     }
 }
 
