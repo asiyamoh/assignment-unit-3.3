@@ -73,7 +73,7 @@ let total = 0;
 for(let i =0; i < supplyChanges.length; i++){
     total += supplyChanges[i];
 }
-console.log("Total is:", total);
+console.log(`Total is: ${total}`);
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
