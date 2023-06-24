@@ -38,13 +38,13 @@ console.log('6. Showing supplyChanges...');
 
 for(i=0; i < supplyChanges.length; i++){
     if(supplyChanges[i] > 0){
-        console.log('added', supplyChanges[i], 'parts');
+        console.log(`added  ${supplyChanges[i]} parts`);
     }
     else if(supplyChanges[i] < 0){
-        console.log('Removed', supplyChanges[i], 'parts');
+        console.log(`Removed ${supplyChanges[i]} parts`);
     }
     else if(supplyChanges[i] == 0){
-        console.log(supplyChanges[i],'No Change');
+        console.log(`${supplyChanges[i]} No Change`);
     }
 }
 
@@ -55,13 +55,13 @@ console.log('7. Showing supplyChanges with "for of" loop');
 
 for(supply of supplyChanges){
     if(supply > 0){
-        console.log('added', supply, 'parts');
+        console.log(`added ${supply} parts`);
     }
     else if (supply < 0){
-        console.log('Removed', supply, 'parts');
+        console.log(`Removed ${supply} parts`);
     }
     else if(supply == 0){
-        console.log(supply, 'No Changes');
+        console.log(`${supply} No Changes`);
     }
 }
 
@@ -91,5 +91,5 @@ while(totalParts > eachBox){
     totalParts -= eachBox;
     filledBox--;
 }
-console.log("There was", filledBox, "boxes filled");
-console.log("There was" , totalParts , "parts left over");
+console.log(`There was ${filledBox} boxes filled`);
+console.log(`There was ${totalParts}  parts left over`);
