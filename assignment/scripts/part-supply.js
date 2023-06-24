@@ -11,7 +11,7 @@ console.log(partsNeeded);
 //    the following numbers: 3, 5, -6, 0, 7, 11
 console.log('2. Array of supplyChanges:');
 let supplyChanges = [3,5,-6,0,7,11];
-
+console.log(supplyChanges);
 
 // 3. Console log the value of the second item in the 'supplyChanges' array
 console.log('3. Second supplyChange is:');
@@ -27,6 +27,7 @@ console.log(removedSupplyChanges);
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
 supplyChanges.push(25);
+console.log(supplyChanges);
 
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
@@ -42,7 +43,7 @@ for(i=0; i < supplyChanges.length; i++){
     else if(supplyChanges[i] < 0){
         console.log('Removed', supplyChanges[i], 'parts');
     }
-    else {
+    else if(supplyChanges[i] == 0){
         console.log(supplyChanges[i],'No Change');
     }
 }
@@ -52,9 +53,27 @@ console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
 
+for(supply of supplyChanges){
+    if(supply > 0){
+        console.log('added', supply, 'parts');
+    }
+    else if (supply < 0){
+        console.log('Removed', supply, 'parts');
+    }
+    else if(supply == 0){
+        console.log(supply, 'No Changes');
+    }
+}
+
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+
+let total = 0;
+for(let i =0; i < supplyChanges.length; i++){
+    total += supplyChanges[i];
+}
+console.log("Total is:", total);
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
@@ -63,3 +82,14 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+
+let totalParts =  572;
+let eachBox = 7;
+let filledBox =  0;
+
+while(totalParts > eachBox){
+    totalParts -= eachBox;
+    filledBox--;
+}
+console.log("There was", filledBox, "boxes filled");
+console.log("There was" , totalParts , "parts left over");
